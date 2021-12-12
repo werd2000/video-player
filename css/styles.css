@@ -1,0 +1,69 @@
+@import 'buttons.css';
+body {
+    background-color: #26B4BC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player {
+    margin-block-start: 100px;
+    position: relative;
+}
+
+.player-overlay {
+    position: absolute;
+    /* INSET define el bloque lógico y las compensaciones de inicio y finalización en línea de un elemento,
+    que se asignan a las compensaciones físicas en función del modo de escritura, la direccionalidad
+    y la orientación del texto del elemento. 
+    Corresponde a las propiedades top y bottom, o right y left dependiendo 
+    de las propiedades en los valores definidos para modo de escritura, dirección y orientación de texto. */
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.player:hover .player-overlay{
+    opacity: 1;
+}
+
+
+.player video{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.player-title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start: 20px;
+}
+
+.player-actions {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* z-index: 2; */
+}
+
+.player-progress {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+    /* z-index: 3; */
+}
+
+.player-progress input {
+    flex: 1;
+}

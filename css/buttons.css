@@ -1,0 +1,34 @@
+.button {
+    /* define el tamaño horizontal o vertical de un  bloque de elementos, 
+       dependiendo del modo de escritura. 
+       Esto corresponde ya sea a la propiedad width o height, dependiendo del valor de  writing-mode. */
+    inline-size: 32px; 
+    /* define el tamaño horizontal o vertical de los elementos en bloque, 
+       dependiendo de los modos de escritura. 
+       Estos corresponden ya sea a la propiedad width o la propiedad height, dependiendo de los valores de writing-mode. */
+    block-size: 32px;
+    border: none;
+    /* tambien pude ser uset o initial */
+    background-color: transparent; 
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.9);
+}
+
+#play {
+    background-image: url('../images/play.svg');
+}
+
+#pause {
+    background-image: url('../images/pause.svg');
+}
+
+#fastward {
+    background-image: url('../images/+10.svg');
+}
+
+#backward {
+    background-image: url('../images/-10.svg');
+}
